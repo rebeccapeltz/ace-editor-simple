@@ -10,12 +10,16 @@
   <script src="https://cdn.alloyui.com/3.0.1/aui/aui-min.js"></script>
   <link href="https://cdn.alloyui.com/3.0.1/aui-css/css/bootstrap.min.css" rel="stylesheet">
   </link>
-  <script src="js/main.js">;</script>
+  <script src="js/main.js">
+    ;
+  </script>
 </head>
 
 <body>
   <div>
-    <button id="view-code">Click</button>
+    <form class="form">
+      <button id="view-code">Click</button>
+    </form>
   </div>
   <div id="ace-editor"></div>
 
@@ -26,12 +30,13 @@
       function (Y) {
         new Y.AceEditor({
           boundingBox: '#ace-editor',
-          mode: 'javascript'
+          mode: 'javascript',
+          height: '200',
+          value: 'alert("Write something here...");',
+          width: '500'
         }).render();
       }
     );
-    
-
   </script>
 </body>
 
